@@ -3,7 +3,7 @@ import cv2
 
 img=cv2.imread('haer.jpg',1)
 
-img=cv2.line(img,(0,0),(255,255),(0,0,255),5)
+img=cv2.rectangle(img,(0,0),(255,255),(0,0,255),5)
 
 print(img)
 
