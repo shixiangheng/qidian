@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-img=cv2.imread('haer.jpg',0)
+img=cv2.imread('haer.jpg',1)
 
 img=cv2.line(img,(0,0),(255,255),(0,0,255),5)
 
