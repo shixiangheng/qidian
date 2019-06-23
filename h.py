@@ -39,4 +39,4 @@ i=cv2.drawContours(img,contours,-1,(0,0,255),3)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-cv2.imwrite('s.jpg',i)
+cv2.imwrite('s.jpg',gray)
