@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread("stop.jpg")    #载入图像
+img = cv2.imread("ice.jpg")    #载入图像
 h, w = img.shape[:2]      #获取图像的高和宽
 #cv2.imshow("Origin", img)     #显示原始图像
 i=img
