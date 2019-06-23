@@ -4,8 +4,8 @@ import numpy as np
 img = cv2.imread("stop.jpg")    #载入图像
 h, w = img.shape[:2]      #获取图像的高和宽
 #cv2.imshow("Origin", img)     #显示原始图像
-
-blured = cv2.blur(img,(5,5))    #进行滤波去掉噪声
+i=img
+blured = cv2.blur(i,(5,5))    #进行滤波去掉噪声
 #cv2.imshow("Blur", blured)     #显示低通滤波后的图像
 
 mask = np.zeros((h+2, w+2), np.uint8)  #掩码长和宽都比输入图像多两个像素点，满水填充不会超出掩码的非零边缘
@@ -32,7 +32,6 @@ ret, binary = cv2.threshold(closed,250,255,cv2.THRESH_BINARY)
 #找到轮廓
 _,contours, hierarchy = cv2.findContours(binary,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 #绘制轮廓
-i=img
 cv2.drawContours(i,contours,-1,(0,0,255),3)
 
 #cv2.imshow("result", img)
