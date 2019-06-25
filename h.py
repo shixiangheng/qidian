@@ -3,8 +3,8 @@ import numpy as np
 
 img = cv2.imread("00000.ppm")    #载入图像
 
-mouth = img[410:446,400:815]
-mouth= mouth[4:46,373:415]
+#mouth = img[410:446,400:815]
+#mouth= mouth[4:46,373:415]
 mouth=img[411:446,774:815]
 h, w = img.shape[:2]      #获取图像的高和宽
 print(h)
