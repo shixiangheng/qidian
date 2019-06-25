@@ -2,8 +2,10 @@ import cv2
 import numpy as np
 
 img = cv2.imread("00000.ppm")    #载入图像
-mouth = img[0:815,0:446]
+mouth = img[10:789,10:446]
 h, w = img.shape[:2]      #获取图像的高和宽
+print(h)
+print(w)
 #cv2.imshow("Origin", img)     #显示原始图像
 i=img
 blured = cv2.blur(i,(5,5))    #进行滤波去掉噪声
