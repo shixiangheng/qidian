@@ -44,4 +44,4 @@ _,contours, hierarchy = cv2.findContours(binary,cv2.RETR_TREE,cv2.CHAIN_APPROX_S
 
 #cv2.waitKey(0)
 #cv2.destroyAllWindows()
-cv2.imwrite('s.ppm',mouth)
+cv2.imwrite('s.ppm',img)
