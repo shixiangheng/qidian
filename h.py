@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 img = cv2.imread("00000.ppm")    #载入图像
-mouth = img[774:411,815:446]
+mouth = img[774:815,441:446]
 h, w = img.shape[:2]      #获取图像的高和宽
 #cv2.imshow("Origin", img)     #显示原始图像
 i=img
@@ -37,6 +37,6 @@ _,contours, hierarchy = cv2.findContours(binary,cv2.RETR_TREE,cv2.CHAIN_APPROX_S
 
 #cv2.imshow("result", img)
 
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+#cv2.waitKey(0)
+#cv2.destroyAllWindows()
 cv2.imwrite('s.ppm',mouth)
