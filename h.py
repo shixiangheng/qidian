@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 img = cv2.imread("00000.ppm")    #载入图像
-mouth = img[774:815,411:446]
+mouth = img[0:815,0:446]
 h, w = img.shape[:2]      #获取图像的高和宽
 #cv2.imshow("Origin", img)     #显示原始图像
 i=img
