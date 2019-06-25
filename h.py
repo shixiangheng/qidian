@@ -1,7 +1,8 @@
 import cv2
 import numpy as np
 
-img = cv2.imread("va.jpg")    #载入图像
+img = cv2.imread("00000.ppm")    #载入图像
+mouth = img[774:411,815:446]
 h, w = img.shape[:2]      #获取图像的高和宽
 #cv2.imshow("Origin", img)     #显示原始图像
 i=img
@@ -32,10 +33,10 @@ ret, binary = cv2.threshold(closed,250,255,cv2.THRESH_BINARY)
 #找到轮廓
 _,contours, hierarchy = cv2.findContours(binary,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 #绘制轮廓
-i=cv2.drawContours(i,contours,-1,(0,0,0),10)
+#i=cv2.drawContours(i,contours,-1,(0,0,0),10)
 
 #cv2.imshow("result", img)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-cv2.imwrite('s.jpg',i)
+cv2.imwrite('s.jpg',mouth)
