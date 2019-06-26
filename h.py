@@ -1,6 +1,8 @@
 import cv2
 import numpy as np
-
+from __future__ import print_function
+import cv2 as cv
+import argparse
 img = cv2.imread("00000.ppm")   
 
 
@@ -15,9 +17,7 @@ for i in range(len(contours)-1):
 
 cv2.imwrite('a.ppm',a)
 cv2.imwrite('n.ppm',newImg)
-from __future__ import print_function
-import cv2 as cv
-import argparse
+
 max_lowThreshold = 100
 window_name = 'Edge Map'
 title_trackbar = 'Min Threshold:'
