@@ -12,5 +12,7 @@ cv2.imwrite('n.ppm',newImg)
 
  
 img = cv2.GaussianBlur(gray,(3,3),0)
-e = cv2.Canny(img, 50, 150)
-cv2.imwrite('e.ppm',e)
+img = cv2.Canny(img, 50, 150)
+img = np.zeros((3,3),dtype=np.uint8)
+img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
+cv2.imwrite('e.ppm',img)
