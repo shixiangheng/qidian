@@ -17,7 +17,7 @@ gray = cv2.cvtColor(n,cv2.COLOR_RGB2GRAY)
 img = cv2.GaussianBlur(gray,(3,3),0)
 img = cv2.Canny(img, 50, 150)
 img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
-'''
+
 img=n
 ret, thresh = cv2.threshold(cv2.cvtColor(img.copy(), cv2.COLOR_BGR2GRAY) , 127, 255, cv2.THRESH_BINARY)
 # findContours函数查找图像里的图形轮廓
@@ -45,5 +45,7 @@ for cnt in contours:
     # 修正凸性缺陷的轮廓区域
     cv2.drawContours(black, [hull], -1, (0, 0, 255), 2)
 # 显示图像
-cv2.imwrite("e.ppm", black)
+'''
+cv2.imwrite("n.ppm", cv2.Canny(n, 200, 300))
+#cv2.imwrite("e.ppm", black)
 
