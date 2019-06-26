@@ -94,6 +94,7 @@ def run():
         # cv2.imwrite("%s.jpg" % id(img), img)
         #cv2.imshow("contours", img)
         #cv2.waitKey(1943)
+        img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
         cv2.imwrite('e.ppm',img)
 
 
