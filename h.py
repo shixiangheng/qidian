@@ -46,6 +46,8 @@ for cnt in contours:
     cv2.drawContours(black, [hull], -1, (0, 0, 255), 2)
 # 显示图像
 '''
-cv2.imwrite("n.ppm", cv2.Canny(a, 200, 300))
+n=cv2.Canny(n, 200, 300)
+n = cv2.cvtColor(n, cv2.COLOR_GRAY2BGR)
+cv2.imwrite("n.ppm", n)
 #cv2.imwrite("e.ppm", black)
 
