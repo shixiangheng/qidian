@@ -1,6 +1,7 @@
+from __future__ import print_function
 import cv2
 import numpy as np
-from __future__ import print_function
+
 import cv2 as cv
 import argparse
 img = cv2.imread("00000.ppm")   
