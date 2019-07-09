@@ -7,7 +7,10 @@ img = cv2.imread("01.jpg")
 
 cv2.imwrite("canny.jpg", cv2.Canny(img, 200, 300))
 #cv2.imshow("canny", cv2.imread("canny.jpg"))
+'''
 img= cv2.imread("canny.jpg")
+cnt = contours[4]
+cv2.drawContours(img, [cnt], 0, (0,255,0), 3)
 
 contours, hierarchy = cv2.findContours(img,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 cv2.drawContours(img,contours,-1,(0,0,255),3)
@@ -15,7 +18,7 @@ cv2.drawContours(img,contours,-1,(0,0,255),3)
 cv2.imwrite("c.jpg",img)
 
 
-'''
+
 
 img = cv2.pyrDown(cv2.imread("01.jpg", cv2.IMREAD_UNCHANGED))
 ret, thresh = cv2.threshold(cv2.cvtColor(img.copy(), cv2.COLOR_BGR2GRAY) , 127, 255, cv2.THRESH_BINARY)
