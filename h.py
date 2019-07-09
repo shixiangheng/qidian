@@ -5,13 +5,13 @@ import os
 
 
 
-img = cv2.imread("00000.ppm")   
+img = cv2.imread("01.jpg")   
 a=img[411:446,774:815]
 img=a
 n = a
 n = cv2.resize(a, (300,300))
-cv2.imwrite('a.ppm',a)
-cv2.imwrite('n.ppm',n)
+cv2.imwrite('a.jpg',a)
+cv2.imwrite('n.jpg',n)
 
 gray = cv2.cvtColor(n,cv2.COLOR_RGB2GRAY)
 img = cv2.GaussianBlur(gray,(3,3),0)
@@ -48,6 +48,6 @@ for cnt in contours:
 
 n=cv2.Canny(n, 200, 300)
 n = cv2.cvtColor(n, cv2.COLOR_GRAY2BGR)
-cv2.imwrite("n.ppm", n)
+cv2.imwrite("n.jpg", n)
 #cv2.imwrite("e.ppm", black)
 
