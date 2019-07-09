@@ -39,5 +39,6 @@ for cnt in contours:
     cv2.drawContours(black, [hull], -1, (0, 0, 255), 2)
 # 显示图像
 #cv2.imshow("hull", black)
+cv2.imwrite("canny.jpg",black)
 cv2.waitKey()
 cv2.destroyAllWindows()
