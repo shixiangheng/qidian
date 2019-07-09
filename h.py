@@ -12,7 +12,7 @@ n = a
 n = cv2.resize(a, (300,300))
 cv2.imwrite('a.ppm',a)
 cv2.imwrite('n.ppm',n)
-'''
+
 gray = cv2.cvtColor(n,cv2.COLOR_RGB2GRAY)
 img = cv2.GaussianBlur(gray,(3,3),0)
 img = cv2.Canny(img, 50, 150)
@@ -45,7 +45,7 @@ for cnt in contours:
     # 修正凸性缺陷的轮廓区域
     cv2.drawContours(black, [hull], -1, (0, 0, 255), 2)
 # 显示图像
-'''
+
 n=cv2.Canny(n, 200, 300)
 n = cv2.cvtColor(n, cv2.COLOR_GRAY2BGR)
 cv2.imwrite("n.ppm", n)
