@@ -4,8 +4,10 @@ import numpy as np
 import os
 
 img = cv2.imread("spl.jpg")
+#img=cv2.Canny(img, 200, 300)
 
-cv2.imwrite("c.jpg", cv2.Canny(img, 200, 300))
+cv2.drawContours(img, contours, -1, (0,255,0), 3)
+cv2.imwrite("c.jpg", img)
 #cv2.imshow("canny", cv2.imread("canny.jpg"))
 '''
 img= cv2.imread("canny.jpg")
