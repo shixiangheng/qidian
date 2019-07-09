@@ -1,0 +1,16 @@
+import multiprocessing as mp
+import cv2
+import numpy as np
+import os
+
+val = raw_input("Enter your value: ")
+print(type(val)) 
+
+img=cv2.imread(val)
+
+
+cv2.Canny(img, 200, 300)
+#n = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
+cv2.imwrite("n.jpg", img)
+
+#print(s)
