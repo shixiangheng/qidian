@@ -5,7 +5,7 @@ import os
 
 img = cv2.imread("spl.jpg")
 
-cv2.imwrite("canny.jpg", cv2.Canny(img, 200, 300))
+cv2.imwrite("c.jpg", cv2.Canny(img, 200, 300))
 #cv2.imshow("canny", cv2.imread("canny.jpg"))
 '''
 img= cv2.imread("canny.jpg")
