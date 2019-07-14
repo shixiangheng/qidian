@@ -8,7 +8,7 @@ img = cv2.imread("s.png")
 imgray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 ret,thresh = cv2.threshold(imgray,127,255,0)
 im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
-cv2.drawContours(img, contours, -1, (0,0,0), 3)
+cv2.drawContours(img, contours, -1, (255,0,0), 3)
 cv2.imwrite("abc.png", img)
 #cv2.imshow("canny", cv2.imread("canny.jpg"))
 '''
