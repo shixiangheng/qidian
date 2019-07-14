@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 import os
 
-img = cv2.imread("01.jpg")
+img = cv2.imread("va.jpg")
 #img=cv2.Canny(img, 200, 300)
 imgray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 ret,thresh = cv2.threshold(imgray,127,255,0)
