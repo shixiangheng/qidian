@@ -10,7 +10,7 @@ ret,thresh = cv2.threshold(imgray,127,255,0)
 #th3 = cv2.adaptiveThreshold(imgray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
 im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_CCOMP,cv2.CHAIN_APPROX_SIMPLE)
 #waijie lunkuo external hen useful!
-cv2.drawContours(img, contours, -1, (0,0,0), 5)
+cv2.drawContours(img, contours, 0, (0,0,0), 5)
 cv2.imwrite("c.jpg", img)
 #cv2.imshow("canny", cv2.imread("canny.jpg"))
 '''
